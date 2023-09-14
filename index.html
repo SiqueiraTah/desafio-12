@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>♥ Desafio Aula 12 ♥</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./style12.css'>
+    </head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+        <h1>Calculadora Elas Na Tech ♥</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#">Menu 01</a></li>
+                <li><a href="#">Menu 02</a></li>
+                <li><a href="#">Menu 03</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="calculadora">
+        <h2>DOM - Document Object Model</h2>
+    <div id="div01" class="content">  
+    <input type="number" name="txt01" id="txt01" class="txt">
+    <input type="number" name="txt02" id="txt02" class="txt">
+    <input type="button" value="+" id="btnsomar" class="txt">
+    <input type="button" value="-" id="btnsub" class="txt">
+    <input type="button" value="*" id="btnmult" class="txt">
+    <input type="button" value="/" id="btndivis" class="txt">
+    <input type="button" value="Limpar" id="btnlimpar" class="txt">
+    <div id="resultado">
+        Resultado
+    </div>
+    </div>
+    </main>  
+    
+    <footer>Elas Na Tech 2023 ♥</footer>
+
+   <script>
+              
+        var btnsomar = document.getElementById('btnsomar');
+        btnsomar.addEventListener('click', somar);
+
+        var btnsub = document.getElementById('btnsub');
+        btnsub.addEventListener('click', subtrair);
+
+        var btnmult = document.getElementById('btnmult');
+        btnmult.addEventListener('click', multiplicar);
+
+        var btndivis = document.getElementById('btndivis');
+        btndivis.addEventListener('click', dividir);
+
+        var btnlimpar = document.getElementById('btnlimpar');
+        btnlimpar.addEventListener('click', limpar);
+
+          
+        
+        function somar(){
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 + num2;
+          
+            result.innerText = 'A Soma é: ' + resultado;
+        }
+
+        function subtrair(){
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 - num2;
+
+            result.innerText = 'A Subtração é: ' + resultado;
+        }
+       
+        function multiplicar(){
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 * num2;
+
+            result.innerText = 'A Multiplicação é: ' + resultado;
+        }
+        
+        function dividir(){
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 / num2;
+
+            result.innerText = 'A Divisão é: ' + resultado;
+        }
+
+        function limpar(){
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            c1.value = '';
+            c2.value = '';
+            result.innerText = 'Resultado';
+        }
+       
+   </script>
+</body>
+</html>
