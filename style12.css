@@ -10,7 +10,6 @@ body{
    align-items: center;
    color:azure;
    padding-top: 10px;
-   
 }
 
 .header-logo{
@@ -24,8 +23,7 @@ body{
    text-transform: uppercase;
    letter-spacing: 2px;
    font-size: 20px;
-   text-decoration: none;
-   
+   text-decoration: none;  
 }
  
 .header-nav a{
